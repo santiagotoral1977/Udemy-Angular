@@ -1,0 +1,27 @@
+<div class="container3">
+<h1>Contacto</h1>
+
+<div id="texto" #textos>
+	<p>
+		Esta es la página de contacto.
+	</p>
+	<button (click)="mostrar_texto()">Mostrar texto</button>
+</div>
+
+Tamaño del slider
+<input type="number" [(ngModel)]="widthSlider" /><br/>
+<button (click)="cargarSlider()">Cargar slider</button>
+<button (click)="resetearSlider()">Resetear slider</button>
+
+<span *ngIf="anchuraToSlider">
+	<slider [anchura]="anchuraToSlider" (conseguirAutor)="getAutor($event)"></slider>
+</span>
+	
+<span *ngIf="autor">
+	{{autor.nombre + " " + autor.email}}
+</span>
+
+
+</div>
+
+
